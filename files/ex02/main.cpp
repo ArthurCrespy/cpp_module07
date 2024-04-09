@@ -20,7 +20,12 @@ int main(void)
 	Array<int> intArray(5);
 	std::cout << "Size of intArray: " << intArray.size() << std::endl;
 
-	Array<int> copiedArray(intArray); // Copy construction
+    int *a = new int();
+    *a = 10;
+    std::cout << "*a: " << *a << std::endl;
+    delete (a);
+
+	Array<int> copiedArray(intArray);
 	std::cout << "Size of copiedArray: " << copiedArray.size() << std::endl;
 
 	Array<int> assignedArray;
@@ -31,10 +36,10 @@ int main(void)
 
 	try
 	{
-        std::cout << "Element at index 10 (out-of-bounds): " << intArray[10] << std::endl;
+		std::cout << "Element at index 10 (out-of-bounds): " << intArray[10] << std::endl;
 	} catch (const std::exception &e)
 	{
-        std::cerr << "Exception caught - " << e.what() << std::endl;
+		std::cerr << "Exception caught - " << e.what() << std::endl;
 	}
 
 	return (0);
