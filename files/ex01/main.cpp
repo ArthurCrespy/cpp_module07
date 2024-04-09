@@ -15,13 +15,20 @@
 #include <iostream>
 
 template <typename T>
-void printElement(T& element)
+void printElement(T &element)
 {
     std::cout << element << " ";
 }
 
 int main(void)
 {
+	int *a = new int();
+	*a = 42;
+	std::cout << "iter on int pointer:\n";
+	iter(a, 1, printElement<int>);
+	std::cout << std::endl;
+	delete (a);
+
     int intArray[] = {1, 2, 3, 4, 5};
     std::cout << "iter on int array:\n";
     iter(intArray, 5, printElement<int>);

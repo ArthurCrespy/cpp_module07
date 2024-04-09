@@ -16,7 +16,9 @@
 template <typename A, typename B, typename C>
 void iter(A *array, B length, C func)
 {
-	for (B i = 0; i < length; i++)
+	if (!array || length < 0|| !func)
+		return ;
+	for (B i = 0; i < length; ++i)
 		func(array[i]);
 }
 
