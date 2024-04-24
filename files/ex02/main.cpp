@@ -21,9 +21,11 @@ int main(void)
 	std::cout << "Size of intArray: " << intArray.size() << std::endl;
 
     int *a = new int();
-    *a = 10;
+	*a = 10;
+	Array<int> intArray1(*a);
     std::cout << "*a: " << *a << std::endl;
-    delete (a);
+	std::cout << "Size of intArray1: " << intArray1.size() << std::endl;
+	delete (a);
 
 	Array<int> copiedArray(intArray);
 	std::cout << "Size of copiedArray: " << copiedArray.size() << std::endl;
