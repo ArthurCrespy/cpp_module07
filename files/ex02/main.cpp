@@ -37,7 +37,8 @@ int main(void)
 	try
 	{
 		std::cout << "Element at index 10 (out-of-bounds): " << intArray[10] << std::endl;
-	} catch (const std::exception &e)
+	}
+	catch (const std::exception &e)
 	{
 		std::cerr << "Exception caught - " << e.what() << std::endl;
 	}
